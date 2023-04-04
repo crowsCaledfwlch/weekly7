@@ -1,0 +1,28 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:weekly7"
+        mc:Ignorable="d"
+        Title="Karaoke Music Night" Height="450" Width="800">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="413" Margin="0,10,0,-0.2" VerticalAlignment="Top" Width="795" Source="karaoke.jpg"/>
+        <Canvas x:Name="cnvMenu" HorizontalAlignment="Left" Height="423" Margin="278,0,0,-0.2" VerticalAlignment="Top" Width="517" Background="Black">
+            <Label x:Name="lblTitle" Content="Karaoke Music Night" Canvas.Left="82" Canvas.Top="26" Foreground="White" FontSize="36"/>
+            <ComboBox x:Name="cmbxCustomize" Text="Customize Your Night" Canvas.Left="82" Canvas.Top="84" Width="340" Height="23" IsReadOnly="True" IsEditable="True">
+                <ComboBoxItem Content="Number of Songs ($2.99 per song)" HorizontalAlignment="Left" Width="338.4"/>
+                <ComboBoxItem Content="Hours in Private Karaoke Booth ($8.99 per song)" HorizontalAlignment="Left" Width="338.4"/>
+            </ComboBox>
+            <Canvas x:Name="cnvCalculations" Height="301" Canvas.Left="10" Canvas.Top="112" Width="497" Visibility="Collapsed">
+                <Label x:Name="lblType" Content="Label" Canvas.Left="77" Canvas.Top="34" Foreground="White" FontSize="24"/>
+                <Button x:Name="btnValue" Content="Total Cost" Canvas.Left="101" Canvas.Top="143" Width="75"/>
+                <Button x:Name="btnClear" Content="Clear" Canvas.Left="296" Canvas.Top="143" Width="75"/>
+                <TextBox x:Name="txtValue" Height="31" Canvas.Left="199" TextWrapping="Wrap" Canvas.Top="80" Width="72"/>
+                <Label x:Name="lblCost" Content="" Canvas.Left="113" Canvas.Top="216" Foreground="White" FontSize="20"/>
+            </Canvas>
+
+        </Canvas>
+
+    </Grid>
+</Window>
